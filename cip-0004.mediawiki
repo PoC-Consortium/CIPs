@@ -4,7 +4,7 @@
   Author: PoCC/rico666 <bots@cryptoguru.org>
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0004
-  Status: Draft
+  Status: Accepted
   Type: Hard Fork
   Created: 2018-04-26
 </pre>
