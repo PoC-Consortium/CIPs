@@ -4,16 +4,23 @@
   Author: PoCC/rico666 <bots@cryptoguru.org>
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0002
-  Status: Draft
+  Status: Accepted
   Type: Hard Fork
   Created: 2018-01-26
 </pre>
 
 ==Abstract==
 
+This CIP proposes a block size growth intended to to be better able to cope with varying transactional load on the Burst blockchain and other technological improvements for the foreseeable future.
 
 ==Motivation==
-
+In order to ensure that miner earnings will nominally remain the same after linear-progressive fee proposed in the Dymaxion Whitepaper, the maximum number of transaction must be 1020.  “Nominally” meaning same network load, same price. Moreover, under high-load conditions miner profit would be a multiple of what it is now.
 
 ==Specification==
 
+===Compatibility===
+This is a hard forking change, thus breaks compatibility with old fully-validating node. It should not be deployed without widespread consensus.
+
+===Memory-Related Parameters===
+
+# maximum number of transactions
