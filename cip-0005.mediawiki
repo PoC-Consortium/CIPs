@@ -1,0 +1,25 @@
+<pre>
+  CIP: 5
+  Title: POC 2
+  Author: PoCC/Quibus
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0005
+  Status: Accepted
+  Type: Hard Fork
+  Created: 2018-04-26
+</pre>
+
+==Abstract==
+POC 2 format plots is consisting of interleaved SHABAL256 hashes and it will prevent time-memory tradeoff for high-range scoops.
+
+==Motivation==
+Now with the current PoC used with Burstcoin, there indeed are time-memory tradeoffs possible.
+This attack on PoC mining fairness was possible in theory, but not feasible economically, because the PoW required for
+this mode of operation consumed far more energy than a PoC mining style.
+
+However recent advancements in hardware and GPU performance do show, that economical feasibility is just a matter of time.
+
+==Specification==
+
+===Compatibility===
+This is a hard forking change, thus breaks compatibility with old fully-validating node. It should not be deployed without widespread consensus.
