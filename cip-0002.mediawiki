@@ -1,0 +1,19 @@
+<pre>
+  CIP: 2
+  Title: Quadruple TX Capacity
+  Author: PoCC/rico666 <bots@cryptoguru.org>
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0002
+  Status: Draft
+  Type: Hard Fork
+  Created: 2018-01-26
+</pre>
+
+==Abstract==
+
+
+==Motivation==
+
+
+==Specification==
+

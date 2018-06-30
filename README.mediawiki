@@ -1,0 +1,30 @@
+=CIPs=
+
+
+==Burstcoin Capability Improvement Proposals==
+
+{| class="wikitable sortable" style="width: auto; text-align: center; font-size: smaller; table-layout: fixed;"
+!Number
+!Layer
+!Title
+!Owner
+!Type
+!Status
+|- 
+| [[cip-0001.mediawiki|1]]
+| Application
+| Dynamic BRS Node Capabilities
+| @rico666
+| Informational
+| Draft
+|-
+| [[cip-0002.mediawiki|2]]
+| Peer Services
+| PoC2
+| @Quibus
+| Standard
+| Accepted
+
+|}
+
+<!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->
