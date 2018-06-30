@@ -12,15 +12,36 @@
 !Status
 |- 
 | [[cip-0001.mediawiki|1]]
-| Application
+| Applications
 | Dynamic BRS Node Capabilities
 | @rico666
 | Informational
 | Draft
 |-
 | [[cip-0002.mediawiki|2]]
-| Peer Services
-| PoC2
+| Consensus (hard fork)
+| Quadruple TX Capacity
+| @rico666
+| Standard
+| Accepted
+|-
+| [[cip-0003.mediawiki|3]]
+| Consensus (hard fork)
+| Variable Slot-based Fees
+| @rico666
+| Standard
+| Accepted
+|-
+| [[cip-0004.mediawiki|4]]
+| Consensus (hard fork)
+| Multi-Out Transactions
+| @rico666
+| Standard
+| Accepted
+|-
+| [[cip-0005.mediawiki|5]]
+| Consensus (hard fork)
+| POC 2
 | @Quibus
 | Standard
 | Accepted
