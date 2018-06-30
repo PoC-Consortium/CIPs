@@ -10,10 +10,17 @@
 </pre>
 
 ==Abstract==
-
+There is a scalability issue with blockchains in general and it becomes increasingly more difficult to have efficient faucets or efficient way to issue a transaction and serve several people at once.
 
 ==Motivation==
-
+With combination of dynamic transaction fees and multi-out + multi-out same transactions, the maximum transaction per second (a.k.a "tps") Burst will able to achieve has jumped from 1 tps to 80 tps.
 
 ==Specification==
 
+===Compatibility===
+This is a hard forking change, thus breaks compatibility with old fully-validating node. It should not be deployed without widespread consensus.
+
+===Memory-Related Parameters===
+
+# maximum multi out recipients
+# maximum multi same out recipients
