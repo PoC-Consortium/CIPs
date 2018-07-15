@@ -1,5 +1,7 @@
 =CIPs=
+People willing to submit CIPs should visit https://burstwiki.org/wiki/CIP and follow the predifined workflow. After discussion on the Burst Discord Server, please open a PR. After copy-editing and acceptance, it will be published here.
 
+Having a CIP listed here doesn't guarantee it is an accepted standard until its status becomes Final or Active.
 
 ==Burstcoin Capability Improvement Proposals==
 
