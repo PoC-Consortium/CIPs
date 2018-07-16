@@ -1,0 +1,20 @@
+<pre>
+  CIP: 6
+  Title: Unconfirmed Tx Queue Optimizations
+  Author: PoCC/Brabantian
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0006
+  Status: Draft
+  Type: Enhancement
+  Created: 2018-07-16
+</pre>
+
+==Abstract==
+
+The ability to issue many transactions wit a "too low" fee can cause
+some strain on unconfirmed transaction (UT) handling and UT
+propagation. While the current wallets can cope with it, there is
+still room for improvement. It is possible to estimate which UT has a
+chance at all to be included in a block and which hasn't. Purging UTs
+that have no chance of being included will lower forging load as well
+as network communication load.

@@ -47,7 +47,20 @@ Having a CIP listed here doesn't guarantee it is an accepted standard until its 
 | @Quibus
 | Standard
 | Accepted
-
+|-
+| [[cip-0006.mediawiki|6]]
+| Enhancement
+| Unconfirmed Tx Queue Optimizations
+| @Brabantian
+| Standard
+| Draft
+|-
+| [[cip-0007.mediawiki|7]]
+| Enhancement
+| Differential Unconfirmed Tx Propagation
+| @Brabantian
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->

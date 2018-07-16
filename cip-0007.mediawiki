@@ -1,0 +1,28 @@
+<pre>
+  CIP: 7
+  Title: Differential Unconfirmed Tx Propagation
+  Author: PoCC/Brabantian
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0007
+  Status: Draft
+  Type: Enhancement
+  Created: 2018-07-16
+</pre>
+
+==Abstract==
+
+Currently, wallets poll their peers for unconfirmed transactions (UT)
+every 5 seconds. During each such poll they get all the UTs currently
+in mempool, which means that until a block is forged (240s on
+average), every UT in mempool can be potentially sent more than 20
+times over and over again. Clearly this can cause a network load and
+could be mitigated with a more intelligent approach of sending UTs.
+
+In a differential UT propagation, for every UT received each node
+attaches a time stamp to this UT with the "node time" it received
+this. When the node is asked by a peer to send unconfirmed
+transactions without such a time stamp, it sends all UTs in mempool
+and the time stamp of the newest UT of this package. THe peer can
+remember this time stamp and next time it polls for UTs, it can send
+this time stamp with the request and gets only new UTs that arrived
+after this time.
