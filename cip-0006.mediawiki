@@ -63,25 +63,25 @@ this structure to be used.
 
 ===Rules===
 
-* The UT should be pre-verified. Verification needs to be re-occur after
+The UT should be pre-verified. Verification needs to be re-occur after
 a new Block is pushed, because it might not be valid anymore.
 
-* The UT isn't past its Deadline yet.
+The UT isn't past its Deadline yet.
 
-* In case the cache is full, the cheapest Transaction should be removed.
+In case the cache is full, the cheapest Transaction should be removed.
 
-* A configurable maximum percentage of UT's with a full hash reference to
+A configurable maximum percentage of UT's with a full hash reference to
 another Transaction is allowed. Additional ones will be ignored.
 
-* In case there are more Transactions than can be taken from a slot
+In case there are more Transactions than can be taken from a slot
 within the current time and the maximum expiration time possible,
 following ones will be ignored. The maximum number of UT's in a single slot
 is the slot height times 360.
 
-* In case a duplicate UT is detected, the cheapest of the duplicated UT's
+In case a duplicate UT is detected, the cheapest of the duplicated UT's
 will be dropped. Whether UT's are duplicates depend on the type and contents
 of the UT.
 
-* When an UT gets added, and the amount of UT's in the UTS goes over the
+When an UT gets added, and the amount of UT's in the UTS goes over the
 configurable max amount, an UT will be dropped. This will be done by
 sorting on Fee (ascending), Deadline (ascending) and ID (ascending).
