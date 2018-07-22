@@ -4,17 +4,84 @@
   Author: PoCC/Brabantian
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0006
-  Status: Draft
+  Status: Accepted
   Type: Enhancement
   Created: 2018-07-16
+  Implemented-Since: 2.2.2
 </pre>
 
 ==Abstract==
 
-The ability to issue many transactions wit a "too low" fee can cause
-some strain on unconfirmed transaction (UT) handling and UT
+The ability to issue many Transactions with a "too low" fee can cause
+some strain on Unconfirmed Transaction (UT) handling and UT
 propagation. While the current wallets can cope with it, there is
 still room for improvement. It is possible to estimate which UT has a
 chance at all to be included in a block and which hasn't. Purging UTs
 that have no chance of being included will lower forging load as well
 as network communication load.
+
+==Motivation==
+
+Unconfirmed Transactions (UT) are Transactions that have not yet been applied
+to the blockchain. This Unconfirmed state means that at that point of time
+they can not be considered final yet. There is always a possibility that
+these Transactions will never be applied.
+
+One of the most important reasons this could happen is because of too much
+"noise" on the network. This would consist of too many low cost UT's
+which would never be accepted due to their too low cost.
+
+These "useless" UT's will still take RAM, processing time
+and bandwidth, but without any cost whatsoever. This is a possible
+attack vector, because it enables attackers to bombard the network with
+these UT's, and severely decreasing network conductivity. The solution
+to mitigate this, is through a smarter management of the UT's kept and
+propagated further through the network, while dropping the ones that never
+had a chance.
+
+==Specification==
+
+The Unconfirmed Transaction Store (UTS) is a data storage that holds the
+current set of Unconfirmed Transactions. It offers a number of operations
+to add, remove and fetch UT's so these can be processed by the system.
+
+The goal of this CIP is to make the UTC more intelligent, allowing it to manage
+on its own which UTs it will keep depending on a set of rules. The way these
+rules will be applied will likely be depend on the implementation of them,
+but the ultimate goal is to have them applied at the earliest moment, so
+a "useless" Transaction either never gets added, or gets kicked out
+as soon as possible.
+
+It's also important to keep in mind that certain rules
+need to be re-applied later on, due to changes on the blockchain through
+block processing.
+
+It is recommended to have your UTStore internally use a SortedMap with
+the maximum Slot an UT can get into as a key (the fee divided by a quant),
+and the value be a list of UT's. The rules described in this CIP assume
+this structure to be used.
+
+===Rules===
+
+* The UT should be pre-verified. Verification needs to be re-occur after
+a new Block is pushed, because it might not be valid anymore.
+
+* The UT isn't past its Deadline yet.
+
+* In case the cache is full, the cheapest Transaction should be removed.
+
+* A configurable maximum percentage of UT's with a full hash reference to
+another Transaction is allowed. Additional ones will be ignored.
+
+* In case there are more Transactions than can be taken from a slot
+within the current time and the maximum expiration time possible,
+following ones will be ignored. The maximum number of UT's in a single slot
+is the slot height times 360.
+
+* In case a duplicate UT is detected, the cheapest of the duplicated UT's
+will be dropped. Whether UT's are duplicates depend on the type and contents
+of the UT.
+
+* When an UT gets added, and the amount of UT's in the UTS goes over the
+configurable max amount, an UT will be dropped. This will be done by
+sorting on Fee (ascending), Deadline (ascending) and ID (ascending).
