@@ -1,0 +1,13 @@
+<pre>
+  CIP: 8
+  Title: 
+  Author: PoCC/rico666
+  Comments-Summary: No comments yet.
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0006
+  Status: Draft
+  Type: Consensus (hard fork)
+  Created: 2018-07-16
+</pre>
+
+==Abstract==
+
