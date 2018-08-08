@@ -1,9 +1,9 @@
 <pre>
-  CIP: 8
-  Title: 
-  Author: PoCC/rico666
+  CIP: 9
+  Title: To-All Transactions
+  Author: PoCC/rico666 (bots@cryptoguru.org)
   Comments-Summary: No comments yet.
-  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0006
+  Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0009
   Status: Draft
   Type: Consensus (hard fork)
   Created: 2018-07-16
@@ -11,3 +11,98 @@
 
 ==Abstract==
 
+To-All transactions are a way of interaction of a single individual
+(address) with the Burst community in its entirety (all addresses). A
+To-All transaction triggers a payment of a sum X that is being
+proportionally disseminated among all existing addresses with funds
+above a certain threshold.
+
+> Lost coins only make everyone else's coins worth slightly
+  more. Think of it as a donation to everyone. -- *Satoshi Nakamoto*
+
+==Motivation==
+
+===Burning Burst===
+
+There is no efficient way to burn Burst coins. One could send them to
+an address that is presumably without known private key (similar to
+[1BitcoinEaterAddressDontSendf59kuE](https://www.blockchain.com/en/btc/address/1BitcoinEaterAddressDontSendf59kuE)
+in Bitcoin), but you never know if that private key really does not
+exist.
+
+Another possibility is to send so small amounts to various addresses,
+that it is by orders of magnitude more expensive to retrieve that
+amount than its nominal value. Without any limits on "Dust" (see
+[[cip-0008.mediawiki|CIP8]]), it is conceivable to "burn Burst" by
+e.g. sending Multi-Out Same transactions with 1 Planck to random
+addresses.
+
+The minimum cost of burning these Burst is the same as is minimum
+retrieval cost. E.g. currently a fully populated Multi-Out Same could
+burn 128 Planck at the cost of 735000 Planck.
+
+===Giving Burst Away===
+
+The quote above from Satoshi Nakamoto illustrates what a "forgotten
+private key" is equivalent to: *a donation to everyone*. So if an
+individual performs such a donation to everyone and effectively burn
+Burst for himself, we did achieve something equivalent to a "Proof of
+Burn" without actually losing the coins from the total supply.
+
+==Specification==
+
+===Dissemination Example===
+
+
+For simplicity, let's assume there are at this moment 5 accounts A₁,
+..., A₅ in existence, where A₅ wants to send 5000 Burst "To-All" and
+the accounts are with the following balances:
+
+    A₁:    400 Burst
+    A₂:    700 Burst
+    A₃: 15 000 Burst
+    A₄:  8 000 Burst
+    A₅: 11 000 Burst
+
+Then we have a total of 400+700+15000+8000+11000 = 35100 Burst in
+existence. However, for our computations, we need to take the 5000
+Burst to be sent out of the total sum to remove their
+self-referentiality. This leaves us with the following percentages of
+the accounts:
+
+    A₁%:   0.01328903654485049834   (400/30100)
+    A₂%:   0.02325581395348837209   (700/30100)
+    A₃%:   0.49833887043189368771 (15000/30100)
+    A₄%:   0.26578073089700996678  (8000/30100)
+    A₅%:   0.19933554817275747508  (6000/30100)
+    -------------------------------------------
+    total: 1.0                    (30100/30100)
+    ===========================================
+
+On the current MainNet, the number of accounts is around 70000 and the
+total Burst is the Burst mined so far ~ 1.96 bn Burst. The
+computational effort is much higher but the same principle applies.
+
+So A₅ paying 5000 Burst To-All, will result in the following layout of
+transfers:
+
+    A₁:   0.01328903654485049834 * 5000 =   66.44518272
+    A₂:   0.02325581395348837209 * 5000 =  116.27906977
+    A₃:   0.49833887043189368771 * 5000 = 2491.69435216
+    A₄:   0.26578073089700996678 * 5000 = 1328.90365448
+    A₅:   0.19933554817275747508 * 5000 =  996.67774086 + 1 Planck
+                                          -------------
+                                          4999.99999999 + 1 Planck
+
+===Production Values Estimate===
+
+
+
+
+== References ==
+
+* [[cip-0008.mediawiki|CIP8 Define Tx and Balance "Dust"]]
+
+== Copyright ==
+
+This document is placed in the public domain.

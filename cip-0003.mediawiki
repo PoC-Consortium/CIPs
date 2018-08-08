@@ -58,3 +58,7 @@ consensus.
 ===Memory-Related Parameters===
 
 # fee quant
+
+== Copyright ==
+
+This document is placed in the public domain.

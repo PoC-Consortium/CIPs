@@ -50,3 +50,11 @@ operators would like to provide.
 
 # maximum CPU cores used
 # GPU support enabled
+
+== References ==
+
+* https://github.com/PoC-Consortium/burstcoin/blob/master/conf/brs-default.properties
+
+== Copyright ==
+
+This document is placed in the public domain.
