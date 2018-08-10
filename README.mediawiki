@@ -94,6 +94,20 @@ until its status becomes Final or Active.
 | @rico666
 | Standard
 | Draft
+|-
+| [[cip-0012.mediawiki|12]]
+| Enhancement
+| BFS - Burst File System
+| @JohnnyDeluxe
+| Standard
+| Draft
+|-
+| [[cip-0013.mediawiki|13]]
+| Enhancement
+| Suggested Transaction Fees
+| @Brabantian
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->

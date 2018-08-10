@@ -43,13 +43,37 @@ burn 128 Planck at the cost of 735000 Planck.
 
 ===Giving Burst Away===
 
-The quote above from Satoshi Nakamoto illustrates what a "forgotten
-private key" is equivalent to: *a donation to everyone*. So if an
+The quote above from Satoshi Nakamoto illustrates that a "forgotten
+private key" is equivalent to *a donation to everyone*. So if an
 individual performs such a donation to everyone and effectively burn
 Burst for himself, we did achieve something equivalent to a "Proof of
-Burn" without actually losing the coins from the total supply.
+Burn", but without actually losing the coins from the total supply.
+
+===PoS: The Other side of the coin===
+
+If we look at a To-All transaction being a "Proof-of-Burn" (PoB), then
+the complement on the recipient side is equivalent to Proof-of-Stake:
+Accounts with a Burst balance get their share from these PoB events
+proportional to their balance. In short, the more Burst you have, the
+more you earn.
 
 ==Specification==
+
+Given an amount *M* of Burst to burn and the total supply being *N*.
+The Dust threshold for accounts is computed as
+
+    Balance > FEE_QUANT and
+    Balance > N / (M * 100 000 000)
+
+===Examples===
+
+Your account balance is FEE_QUANT or less: No matter how many Burst
+are burnt, your account will receive no Plancks.
+
+If the total supply (N) is 1980000000 and 1 (M) Burst is burnt, then
+the 1-Planck threshold is for accounts that have a balance of 19.8
+Burst.
+
 
 ===Dissemination Example===
 
@@ -93,10 +117,6 @@ transfers:
     A₅:   0.19933554817275747508 * 5000 =  996.67774086 + 1 Planck
                                           -------------
                                           4999.99999999 + 1 Planck
-
-===Production Values Estimate===
-
-
 
 
 == References ==
