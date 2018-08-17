@@ -59,13 +59,14 @@ banks.
 In this CIP, we propose a "real world fiscal data section" (RWFDS) to
 be stored within each block of the blockchain. This should be a
 simple, fixed length key-value format denoting values of certain
-currencies and commodities in Burst. The total size of the block could
-be a modest 1024 byte, which would leave us space for 64 key value
-pairs and each key could have up to 8 (ASCII)-bytes identifiers.
+currencies and commodities in Burst (more precisely: in Planck). The
+total size of the block could be a modest 1024 byte, which would leave
+us space for 64 key value pairs and each key could have up to 8
+(ASCII)-bytes identifiers.
 
     00000USD:000XXXXX
     00000EUR:000YYYYY
-    01oz Aur:000ZZZZZ
+    001g Aur:000ZZZZZ
 
 The '0' are to be understood as padding 0-bytes, the ':' is just for
 visualization purposes, not existant in the real data.
@@ -80,6 +81,32 @@ properties:
 * other consumers depend on the validity of this data too
 * sufficient redundancy, so a temporary failure of some sources can be compensated
 
+Independence:
+
+Preferably we do not fetch real world data from source X and Y, where
+e.g. source Y fetches its data from X too. We may use dependent
+sources as a means of access redundancy or load balancing for the
+nodes in the Burst network, but not as means of data redundancy.
+
+Reliability:
+
+The data source must have a record of reliability and uptime as well
+as scalability (able to sustain traffic the Burst network may impose
+on it). Also, we should make sure the Burst network retrievals are ok
+with the operator and not seen as some form of DDoS.
+
+Non-Exclusiveness:
+
+Other consumers apart from the Burst network also depend on the
+data. This way we make sure disruption of the service motivates also
+other interest groups to work towards restoring the service.
+
+Redundancy:
+
+Outage of M out of N data sources does not disrupt Burst RWDS building
+operation.
+
+
 ===Node Behavior At Source Failure===
 
 In order to ensure consensus, but to prevent excessive forking events
@@ -88,8 +115,9 @@ to adhere to the following principles:
 
 * if a data source becomes unavailable, assume value of the past block
 * if the value change of retrieved data exceeds the variance of past N blocks, assume value of the past block
-* if any of the adverse events above happens, do not use the data to sign/validate a block, but only to validate data from nodes claiming to have genuine RWFDS content
+* if any of the adverse events above happens, do not use the data to sign/validate a block, but only to validate data from the majority of nodes claiming to have genuine RWFDS content
 
+If no node majority can be found, use the last RWFDS that had consensus. (Ultimate Fallback)
 
 
 ==References==

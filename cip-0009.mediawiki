@@ -74,6 +74,13 @@ If the total supply (N) is 1980000000 and 1 (M) Burst is burnt, then
 the 1-Planck threshold is for accounts that have a balance of 19.8
 Burst.
 
+Because to-all transactions will adhere to dust threshold
+recommendations, in the case of burning one Burst, your lowest account
+balance in the case above is FEE_QUANT * 19.8 BURST = 14,553,000 BURST
+
+In the case 5000 BURST are burned, the lowest account balance to
+receive Burst is 14,553,000 / 5,000 = 2910,60 BURST
+
 
 ===Dissemination Example===
 
@@ -117,6 +124,34 @@ transfers:
     A₅:   0.19933554817275747508 * 5000 =  996.67774086 + 1 Planck
                                           -------------
                                           4999.99999999 + 1 Planck
+
+
+== Discussion ==
+
+The current balance of Burst on the Poloniex and Bittrex exchange
+accounts at the time of this publication (2017-08-17, see also
+https://explore.burst.cryptoguru.org/chart/richlist) is around 57% of
+the currently available supply.
+
+This means that in case of a "To-All transaction", these exchange
+accounts together would get 57% of the burned Burst. At the moment,
+the exchanges most certainly have no process to propagate these
+PoS-like earned Burst to the individual account holders (i.e. pass
+them on).
+
+The exchanges would be the biggest beneficiaries of To-all
+transactions, while the users with Burst on these exchages would be
+abstained from receiving the Burst they should, clearly there are two
+possibe consequences:
+
+1) get the exchanges to have the customers participate (pass it on)
+
+or
+
+2) get your Burst in your private wallet
+
+As 2) is detrimental for the exchanges, we believe an arrangement can
+be made, so exchanges implement 1)
 
 
 == References ==

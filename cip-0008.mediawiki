@@ -16,8 +16,8 @@ Burst - called a Planck - is 1/100 000 000th of a Burst. It is
 certainly possible - right now - to send 1 Planck to any address.
 
 The current minimum FEE_QUANT (the smallest fee you can use to make a
-transaction) is 735 000 Planck. It is conceivable that in future this
-fee might be lowered.
+transaction) is 735 000 Planck. It is conceivable that in future where
+Burst has a much higher value, this fee might be lowered.
 
 There are a few applications where sending 1 Planck seems
 reasonable. One could "burn Burst" by sending 1 Planck to random
@@ -29,7 +29,7 @@ Currently such a transaction would send 128 Planck and cost at least
 the FEE_QUANT would go straight to miner reward and therefore remain
 in the economic cycle of Burst.
 
-We believe addresses containing a balance less than FEE_QUANT should
+Addresses containing a balance less than FEE_QUANT should
 be considered "Balance Dust".
 
 A payment transaction of any type (as of now Ordinary Payments,
@@ -41,8 +41,8 @@ containing "Balance Dust".
 
 Depending on the context, but effectively for every type of
 transaction, there is a threshold below which the sums are
-irrelevant. This does result in rounding to the Nth digit, truncating
-or similar approximations.
+economically irrelevant. This does result in rounding to the Nth
+digit, truncating or similar approximations.
 
 As of today, FEE_QUANT is around 0.00735 US-cent and even with a Burst
 reaching parity with the USD, FEE_QUANT would still be below 1
@@ -50,11 +50,15 @@ US-cent. This threshold is for the foreseeable future low enough to
 not cause economic damage when rounding to it or considering only
 amounts higher than this.
 
+Coupling the informal term "dust" to FEE_QUANT, protects small balance
+accounts even in the case Burst should rise significantly in
+value. FEE_QUANT would have to be lowered then to keep transaction
+cost economically feasible.
 
 ==Specification==
 
 As this CIP is an informal proposal, the Burst protocol will further
-allow to make transactions whose economic impact is below
+*allow* to make transactions whose economic impact is below
 FEE_QUANT. However, if this CIP is accepted, it shall not be
 considered a bug if a software or process does not.
 

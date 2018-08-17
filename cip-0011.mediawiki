@@ -62,10 +62,11 @@ have depends on which promises the asset issuer made, how transparent
 asset backing and operation is, etc.
 
 There is no guarantee whatsoever, that a given asset token will retain
-some value in BURST, let alone in some Fiat currency or even Gold.
+some value in BURST, let alone in some Fiat currency or even a
+commodity such as gold.
 
 Tethered assets on the other hand do guarantee exactly that: A
-tethered USD-token will have a value that is 1:1 equvalent to a
+tethered USD-token will have a value that is 1:1 equivalent to a
 real-world USD from its creation on over its whole - indefinite - life
 time.
 
@@ -89,6 +90,8 @@ will allow for "Tethered Tokens" within a DL.
 
 ==Specification==
 
+===Buying and Creation===
+
 Depending on the real-world data (see [[cip-0010.mediawiki|CIP10]])
 stored in the current block, we can immediately think of issuing the
 corresponding assets with tokens based on the currencies or
@@ -105,10 +108,10 @@ two possible ways to acquire a tethered asset equivalent to these:
    them "from the community" through a "To-All Transaction"
 
 Both ways are absolutely equivalent in terms of cost. Any user wanting
-to purchase these tokens will pay exactly the same price either
-way. The 2nd way is always open (and also the way to bring these
-tokens into existence) and the preferred/only way to go if no such
-tokens are offered at the time of buying.
+to purchase/create these tokens will pay exactly the same price either
+way. The 2nd way is always open if there are no such tokens for sale
+at current market price. Therefore it is also the way to bring these
+tokens into existence.
 
 Let C₁ ... Cₙ be commodities tracked by the blockchain, then Vₙ(Cₓ) is
 the Burst value of commodity Cₓ at block height n
@@ -118,16 +121,34 @@ of Cₓ will result in the cost of m * Vₙ(Cₓ) Burst
 
 This cost can either be paid by either buying already existing tokens
 of this commodity directly from a seller - at this
-consensus-determinded price, or new tokens of this commodity can be
-created at the same cost by issuing a "To-All transaction" of
-               m * Vₙ(Cₓ) Burst
+consensus-determinded price. Only if no tokens are available for sale,
+new tokens of this commodity can be created at the same cost by
+issuing a "To-All transaction" of
+
+    m * Vₙ(Cₓ) Burst
 
 Provided the buyer has enough liquidity of course, these Burst would
 be dissemiated across all addresses holding Burst over the defined
 dust threshold, but otherwise the computation of the buying sum to be
 transferred would go down to 1 Planck in precision.
 
+As a result of buying TA tokens, the buyer would simply receive the TA
+tokens and the seller would receive the Burst according to curent
+market price - exactly as the Asset Exchange buy/sell process works
+today.
 
+As a result of creating TA tokens, the creator would burn/lose the
+respective amount of Burst and "everybody else" will have their Burst
+balance raised proportionally. (see [[cip-0009.mediawiki|CIP9]])
+
+===Destroying TA Tokens===
+
+By design, there is no way to destroy a TA token once it has come into
+existence. This would require a kind of "reverse burn" or from-all
+transaction and in this respect the functionality cannot be symmetric.
+
+As such, tethered values are infinite and keep their value as long as
+their real-world counterparts keep theirs.
 
 == References ==
 
