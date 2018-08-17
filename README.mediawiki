@@ -74,7 +74,7 @@ until its status becomes Final or Active.
 | Standard
 | Draft
 |-
-| [[cip-0009.mediawiki|9]]
+| [[cip-0009.md|9]]
 | Consensus (hard fork)
 | To-All Transactions
 | @rico666
