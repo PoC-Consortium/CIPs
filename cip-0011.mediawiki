@@ -11,7 +11,7 @@
 
 ==Dependencies==
 
-[[cip-0008.mediawiki|CIP8]], [[cip-0009.mediawiki|CIP9]], [[cip-0010.mediawiki|CIP10]]
+[[cip-0008.mediawiki|CIP8]], [[cip-0009.md|CIP9]], [[cip-0010.mediawiki|CIP10]]
 
 ==Abstract==
 
@@ -35,7 +35,7 @@ rate determined by the wallet based on the real-world data (see
 
 Creating such an asset (or adding tokens to it), would imply to "buy"
 these from the network. Again at a wallet-determined exchange rate, a
-"To-All Transaction" (see [[cip-0009.mediawiki|CIP9]]) would basically
+"To-All Transaction" (see [[cip-0009.md|CIP9]]) would basically
 disseminate the Burst funds used to create/extend this asset among all
 Burst addresses above a certain Dust threshold (see
 [[cip-0008.mediawiki|CIP8]]).
@@ -139,7 +139,7 @@ today.
 
 As a result of creating TA tokens, the creator would burn/lose the
 respective amount of Burst and "everybody else" will have their Burst
-balance raised proportionally. (see [[cip-0009.mediawiki|CIP9]])
+balance raised proportionally. (see [[cip-0009.md|CIP9]])
 
 ===Destroying TA Tokens===
 
@@ -153,7 +153,7 @@ their real-world counterparts keep theirs.
 == References ==
 
 * [[cip-0008.mediawiki|CIP8 Define Tx and Balance "Dust"]]
-* [[cip-0009.mediawiki|CIP9 To-All Transactions]]
+* [[cip-0009.md|CIP9 To-All Transactions]]
 * [[cip-0010.mediawiki|CIP10 Anchor Real-World Data in Blockchain]]
 
 == Copyright ==
