@@ -108,6 +108,13 @@ until its status becomes Final or Active.
 | @Brabantian
 | Standard
 | Draft
+|-
+| [[cip-0014.md|14]]
+| Enhancement
+| Burst Actions through Deeplink QR-codes
+| @Brabantian
+| Standard
+| Draft
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->
