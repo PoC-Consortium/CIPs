@@ -48,7 +48,7 @@ decentral data. This may put some data off limits, but plenty of
 interesting data remain.
 
 In order to be able to implement "Tethered Assets" (see
-[[cip-0011.mediawiki|CIP11 Tethered Assets]]), the most interesting of
+[[cip-0011.md|CIP11 Tethered Assets]]), the most interesting of
 these data are tickers from exchanges (regular and crypto) and central
 banks.
 
@@ -122,7 +122,7 @@ If no node majority can be found, use the last RWFDS that had consensus. (Ultima
 
 ==References==
 
-* [[cip-0011.mediawiki|CIP11 Tethered Assets]]
+* [[cip-0011.md|CIP11 Tethered Assets]]
 
 
 ==Copyright==

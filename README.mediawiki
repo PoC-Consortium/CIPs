@@ -68,7 +68,7 @@ until its status becomes Final or Active.
 | Draft
 |-
 | [[cip-0008.mediawiki|8]]
-| Consensus (hard fork)
+| Informal
 | Define Tx and Balance "Dust"
 | @rico666
 | Standard
@@ -88,7 +88,7 @@ until its status becomes Final or Active.
 | Standard
 | Draft
 |-
-| [[cip-0011.mediawiki|11]]
+| [[cip-0011.md|11]]
 | Consensus (hard fork)
 | Tethered Assets
 | @rico666
