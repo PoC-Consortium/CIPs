@@ -4,7 +4,7 @@
   Author: PoCC/Brabantian
   Comments-Summary: No comments yet.
   Comments-URI: https://github.com/PoC-Consortium/CIPs/wiki/Comments:CIP-0007
-  Status: Draft
+  Status: Active
   Type: Enhancement
   Created: 2018-07-16
 </pre>
