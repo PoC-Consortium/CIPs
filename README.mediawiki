@@ -58,14 +58,14 @@ until its status becomes Final or Active.
 | Unconfirmed Tx Queue Optimizations
 | @Brabantian
 | Standard
-| Draft
+| Active
 |-
 | [[cip-0007.mediawiki|7]]
 | Enhancement
 | Differential Unconfirmed Tx Propagation
 | @Brabantian
 | Standard
-| Draft
+| Active
 |-
 | [[cip-0008.mediawiki|8]]
 | Informal
@@ -114,7 +114,7 @@ until its status becomes Final or Active.
 | Burst Actions through Deeplink QR-codes
 | @Brabantian
 | Standard
-| Draft
+| Active
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->
