@@ -115,6 +115,27 @@ until its status becomes Final or Active.
 | @Brabantian
 | Standard
 | Active
+|-
+| [[cip-0015.md|15]]
+| Consensus (hard fork)
+| RWFDS-enabled FEE_QUANT Introspection and Adjustment
+| @Frank72
+| Standard
+| Draft
+|-
+| [[cip-0016.md|16]]
+| Enhancement
+| PoC2.X16 - A New Optimized Plot File Format
+| @JohnnyFFM
+| Standard
+| Draft
+|-
+| [[cip-0017.md|17]]
+| Enhancement
+| Differential UT Propagation in push & pull
+| @Brabantian
+| Standard
+| Accepted
 |}
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->
