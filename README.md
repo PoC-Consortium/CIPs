@@ -24,6 +24,6 @@ Having a CIP listed here doesn't guarantee it is an accepted standard until its 
 | [14](cip-0014.md "wikilink")        | Enhancement           | Burst Actions through Deeplink QR-codes               | @Brabantian   | Standard      | Active   |
 | [15](cip-0015.md "wikilink")        | Consensus (hard fork) | RWFDS-enabled FEE\_QUANT Introspection and Adjustment | @Frank72      | Standard      | Draft    |
 | [16](cip-0016.md "wikilink")        | Enhancement           | PoC2.X16 - A New Optimized Plot File Format           | @JohnnyFFM    | Standard      | Draft    |
-| [17](cip-0017.md "wikilink")        | Enhancement           | Differential UT Propagation in push & pull            | @Brabantian   | Standard      | Accepted |
+| [17](cip-0017.md "wikilink")        | Enhancement           | Differential UT Propagation in push & pull            | @Brabantian   | Standard      | Active |
 
 <!-- IMPORTANT!  See the instructions at the top of this page, do NOT JUST add CIPs here! -->
