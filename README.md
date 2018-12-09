@@ -20,7 +20,7 @@ Having a CIP listed here doesn't guarantee it is an accepted standard until its 
 | [10](cip-0010.md "wikilink") | Consensus (hard fork) | Anchor Real-World Data in Blockchain                  | @rico666      | Standard      | Draft    |
 | [11](cip-0011.md "wikilink")        | Consensus (hard fork) | Tethered Assets                                       | @rico666      | Standard      | Draft    |
 | [12](cip-0012.md "wikilink") | Enhancement           | BFS - Burst File System                               | @JohnnyDeluxe | Standard      | Draft    |
-| [13](cip-0013.md "wikilink") | Enhancement           | Suggested Transaction Fees                            | @Brabantian   | Standard      | Draft    |
+| [13](cip-0013.md "wikilink") | Enhancement           | Suggested Transaction Fees                            | @Brabantian   | Standard      | Active   |
 | [14](cip-0014.md "wikilink")        | Enhancement           | Burst Actions through Deeplink QR-codes               | @Brabantian   | Standard      | Active   |
 | [15](cip-0015.md "wikilink")        | Consensus (hard fork) | RWFDS-enabled FEE\_QUANT Introspection and Adjustment | @Frank72      | Standard      | Draft    |
 | [16](cip-0016.md "wikilink")        | Enhancement           | PoC2.X16 - A New Optimized Plot File Format           | @JohnnyFFM    | Standard      | Draft    |
